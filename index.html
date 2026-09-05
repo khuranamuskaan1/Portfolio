@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Muskaan Khurana</title>
+<meta id="page-desc" name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav class="topnav">
+  <span class="brand" id="nav-brand"></span>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-list">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-list">
+    <li><a href="#work" data-nav>Work</a></li>
+    <li><a href="#proof" data-nav>Impact</a></li>
+    <li><a href="#howiwork" data-nav>Capabilities</a></li>
+    <li><a href="#story" data-nav>Story</a></li>
+    <li><a href="#iso" data-nav>ISO 20022</a></li>
+    <li><a href="#contact" data-nav>Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-photo-wrap"><img id="hero-photo" src="" alt=""></div>
+      <div>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-title" id="hero-title"></p>
+        <p class="hero-tagline" id="hero-tagline"></p>
+        <div class="hero-hats">
+          <div class="hero-hats-line" id="hero-hats-line"></div>
+          <div class="hero-hats-sub" id="hero-hats-sub"></div>
+        </div>
+        <div class="hero-microproof" id="hero-microproof"></div>
+        <p class="hero-relocation" id="hero-relocation"></p>
+        <div class="hero-ctas" id="hero-ctas"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <span class="eyebrow reveal in-view" id="proof-eyebrow"></span>
+    <div class="proof-strip" id="proof-strip"></div>
+    <p class="proof-secondary reveal in-view" id="proof-secondary"></p>
+    <div class="scale-card reveal in-view" id="scale-card"></div>
+  </section>
+
+  <section id="work">
+    <span class="eyebrow reveal in-view" id="work-eyebrow"></span>
+    <h2 class="work-heading reveal r1 in-view" id="work-heading"></h2>
+    <div id="cases-mount"></div>
+  </section>
+
+  <section id="howiwork">
+    <span class="eyebrow reveal in-view" id="cap-eyebrow"></span>
+    <p class="cap-subhead reveal r1 in-view" id="cap-subhead"></p>
+    <div class="hats-grid" id="hats-grid"></div>
+    <h3 class="howiwork-heading" id="howiwork-heading"></h3>
+    <div class="work-grid" id="how-grid"></div>
+    <div class="tools-row reveal in-view" id="tools-row"></div>
+  </section>
+
+  <section id="testimonials">
+    <span class="eyebrow reveal in-view" id="test-eyebrow"></span>
+    <div class="testi-grid">
+      <div class="testi-card reveal r1 in-view">
+        <div class="test-role" id="test-role-1"></div>
+        <div id="test-quotes-1"></div>
+      </div>
+      <div class="testi-card reveal r2 in-view">
+        <div class="test-role" id="test-role-2"></div>
+        <div id="test-quotes-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <span class="eyebrow reveal in-view" id="story-eyebrow"></span>
+    <p class="story-closed reveal r1 in-view" id="story-closed"></p>
+    <button class="expand-toggle reveal r2 in-view" id="story-toggle" aria-expanded="false"></button>
+    <div class="expand-wrap" id="story-wrap">
+      <div class="expand-inner">
+        <div class="story-timeline" id="story-timeline"></div>
+        <p class="story-landing" id="story-landing"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="iso">
+    <span class="eyebrow reveal in-view" id="isodeep-eyebrow"></span>
+    <h2 class="work-heading reveal r1 in-view" id="isodeep-heading"></h2>
+    <p class="iso-opening reveal r2 in-view" id="isodeep-opening"></p>
+    <p class="iso-summary reveal r2 in-view" id="isodeep-summary"></p>
+    <button class="expand-toggle" id="iso-toggle" aria-expanded="false"></button>
+    <div class="expand-wrap" id="wrap-iso">
+      <div class="expand-inner">
+        <div style="margin-top:1.6rem;">
+          <div class="iso-families" id="iso-families"></div>
+          <ul class="iso-caps" id="iso-caps"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <span class="eyebrow reveal in-view" id="contact-eyebrow"></span>
+    <p class="contact-line reveal r1 in-view" id="contact-headline"></p>
+    <p class="contact-sub reveal r1 in-view" id="contact-sub"></p>
+    <div class="contact-ctas reveal r2 in-view" id="contact-ctas"></div>
+    <div class="contact-grid reveal r3 in-view" id="contact-grid"></div>
+  </section>
+
+  <footer id="footer-text"></footer>
+
+</main>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  var C = SITE_CONTENT;
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.getElementById('page-title').textContent = C.meta.title;
+  document.getElementById('page-desc').setAttribute('content', C.meta.description);
+  document.getElementById('nav-brand').textContent = C.hero.name.split(' ').map(function(w){return w[0];}).join('');
+
+  // HERO
+  var photo = document.getElementById('hero-photo');
+  photo.src = C.hero.photo; photo.alt = C.hero.name;
+  document.getElementById('hero-name').textContent = C.hero.name;
+  document.getElementById('hero-title').textContent = C.hero.title;
+  document.getElementById('hero-tagline').textContent = C.hero.tagline;
+  document.getElementById('hero-hats-line').textContent = C.hero.hatsLine;
+  document.getElementById('hero-hats-sub').textContent = C.hero.hatsSubline;
+  document.getElementById('hero-microproof').innerHTML = C.hero.microProof.map(function(s){
+    return '<div class="hero-microproof-item"><div class="val">'+s.value+'</div><div class="lbl">'+s.label+'</div></div>';
+  }).join('');
+  document.getElementById('hero-relocation').textContent = C.hero.relocation;
+  var heroCvBtn = C.contact.resumeHref
+    ? '<a class="btn ghost" href="'+C.contact.resumeHref+'" target="_blank" rel="noopener">'+C.hero.ctaTertiaryLabel+'</a>'
+    : '<span class="btn disabled" title="Resume link not yet provided">'+C.hero.ctaTertiaryLabel+' (link pending)</span>';
+  document.getElementById('hero-ctas').innerHTML =
+    '<a class="btn" href="'+C.hero.ctaPrimary.href+'">'+C.hero.ctaPrimary.label+'</a>' +
+    '<a class="btn ghost" href="'+C.hero.ctaSecondary.href+'">'+C.hero.ctaSecondary.label+'</a>' +
+    heroCvBtn;
+
+  // PROOF
+  document.getElementById('proof-eyebrow').textContent = C.proof.eyebrow;
+  document.getElementById('proof-strip').innerHTML = C.proof.stats.map(function(s,i){
+    var numeric = parseInt(s.value,10);
+    var hasPct = s.value.indexOf('%') > -1;
+    return '<div class="proof-item reveal r'+Math.min(i%3+1,3)+' in-view"><div class="cs-stat" '+(isNaN(numeric)?'':'data-target="'+numeric+'" data-suffix="'+(hasPct?'%':'')+'"')+'>'+(isNaN(numeric)?s.value:'0'+(hasPct?'%':''))+'</div><div class="cs-statlabel">'+s.label+'</div></div>';
+  }).join('');
+  document.getElementById('proof-secondary').textContent = C.proof.secondary;
+  document.getElementById('scale-card').textContent = C.proof.scaleCard;
+
+  // WORK / CASES
+  document.getElementById('work-eyebrow').textContent = C.work.eyebrow;
+  document.getElementById('work-heading').textContent = C.work.heading;
+  document.getElementById('cases-mount').innerHTML = C.work.items.map(function(cs, idx){
+    var deepId = 'deep-cs' + idx;
+    return '<div class="case" id="cs'+(idx+1)+'">' +
+      '<span class="eyebrow reveal in-view">'+cs.tag+'</span>' +
+      '<h3 class="cs-title reveal r1 in-view">'+cs.title+'</h3>' +
+      '<div class="cs-body">' +
+        '<div class="cs-text reveal r2 in-view">' +
+          '<div class="cs-label">Problem</div><p class="cs-copy">'+cs.problem+'</p>' +
+          '<div class="cs-label">What I Owned</div><p class="cs-copy">'+cs.owned+'</p>' +
+          '<div class="cs-label">Decision</div><p class="cs-copy">'+cs.decision+'</p>' +
+          '<button class="expand-toggle" data-toggle="'+deepId+'" aria-expanded="false"></button>' +
+          '<div class="expand-wrap" id="wrap-'+deepId+'"><div class="expand-inner"><div class="cs-deep">' +
+            '<div class="cs-label">Method</div><p class="cs-copy">'+cs.method+'</p>' +
+            '<div class="cs-label">Trade-off</div><p class="cs-copy">'+cs.tradeoff+'</p>' +
+            '<div class="cs-label">Under Pressure</div><p class="cs-copy">'+cs.pressure+'</p>' +
+            '<div class="cs-label">What I\u2019d Refine</div><p class="cs-copy">'+cs.learning+'</p>' +
+            (cs.deepDive ? '<a class="expand-toggle" href="#iso">Go deeper: Payments / ISO 20022 \u2192</a>' : '') +
+          '</div></div></div>' +
+        '</div>' +
+        '<div class="cs-side reveal r3 in-view">' +
+          '<div class="cs-stat" data-target="'+cs.statValue+'" data-suffix="'+cs.statSuffix+'">0'+cs.statSuffix+'</div>' +
+          '<div class="cs-statlabel">'+cs.statLabel+'</div>' +
+          (cs.statSub ? '<div class="cs-statsub">'+cs.statSub+'</div>' : '') +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+
+  // CAPABILITIES (hats + how i work + tools)
+  document.getElementById('cap-eyebrow').textContent = C.capabilities.eyebrow;
+  document.getElementById('cap-subhead').textContent = C.capabilities.hatsIntro;
+  document.getElementById('hats-grid').innerHTML = C.capabilities.hats.map(function(h,i){
+    return '<div class="hat-card reveal r'+Math.min(i%3+1,3)+' in-view"><div class="hat-name">'+h.name+'</div><div class="hat-proof">'+h.proof+'</div></div>';
+  }).join('');
+  document.getElementById('howiwork-heading').textContent = C.capabilities.howIWorkHeading;
+  document.getElementById('how-grid').innerHTML = C.capabilities.capabilitiesList.map(function(c,i){
+    return '<div class="cap-card reveal r'+Math.min(i%3+1,3)+' in-view"><div class="cap-name">'+c.name+'</div><div class="cap-evidence">'+c.evidence+'</div></div>';
+  }).join('');
+  document.getElementById('tools-row').textContent = 'Tools: ' + C.capabilities.tools;
+
+  // TESTIMONIALS
+  document.getElementById('test-eyebrow').textContent = C.testimonials.eyebrow;
+  document.getElementById('test-role-1').textContent = C.testimonials.voice1.role;
+  document.getElementById('test-quotes-1').innerHTML = C.testimonials.voice1.quotes.map(function(q){
+    return '<p class="test-quote">\u201C'+q+'\u201D</p>';
+  }).join('');
+  document.getElementById('test-role-2').textContent = C.testimonials.voice2.role;
+  document.getElementById('test-quotes-2').innerHTML = C.testimonials.voice2.quotes.map(function(q){
+    return '<p class="test-quote">\u201C'+q+'\u201D</p>';
+  }).join('');
+
+  // MY STORY
+  document.getElementById('story-eyebrow').textContent = C.myStory.eyebrow;
+  document.getElementById('story-closed').textContent = C.myStory.closedLine;
+  document.getElementById('story-timeline').innerHTML = C.myStory.stages.map(function(s){
+    return '<div class="story-stage">' +
+      '<div class="stage-phase">'+s.phase+'</div>' +
+      '<div class="stage-when">'+s.when+'</div>' +
+      '<div class="stage-row"><b>What I did: </b>'+s.what+'</div>' +
+      '<div class="stage-row"><b>Why I moved: </b>'+s.why+'</div>' +
+      '<div class="stage-row"><b>What I learned: </b>'+s.learned+'</div>' +
+      '<div class="stage-row"><b>What I gained: </b>'+s.gained+'</div>' +
+    '</div>';
+  }).join('');
+  document.getElementById('story-landing').textContent = C.myStory.landing;
+
+  // ISO (inline expandable)
+  document.getElementById('isodeep-eyebrow').textContent = C.isoDeepDive.eyebrow;
+  document.getElementById('isodeep-heading').textContent = C.isoDeepDive.heading;
+  document.getElementById('isodeep-opening').textContent = C.isoDeepDive.opening;
+  document.getElementById('isodeep-summary').textContent = C.isoDeepDive.summary;
+  document.getElementById('iso-families').innerHTML = C.isoDeepDive.families.map(function(f,i){
+    return '<div class="iso-family reveal r'+Math.min(i%3+1,3)+' in-view"><div class="iso-code">'+f.code+'</div><div class="iso-fname">'+f.name+'</div><div class="iso-fdetail">'+f.detail+'</div></div>';
+  }).join('');
+  document.getElementById('iso-caps').innerHTML = C.isoDeepDive.capabilities.map(function(c){ return '<li>'+c+'</li>'; }).join('');
+
+  // CONTACT
+  document.getElementById('contact-eyebrow').textContent = C.contact.eyebrow;
+  document.getElementById('contact-headline').textContent = C.contact.headline;
+  document.getElementById('contact-sub').textContent = C.contact.subline;
+  var cvBtn = C.contact.resumeHref
+    ? '<a class="btn ghost" href="'+C.contact.resumeHref+'" target="_blank" rel="noopener">Download CV</a>'
+    : '<span class="btn disabled" title="Resume link not yet provided">Download CV (link pending)</span>';
+  document.getElementById('contact-ctas').innerHTML =
+    '<a class="btn" href="mailto:'+C.contact.email+'">Let\u2019s talk</a>' +
+    '<a class="btn ghost" href="'+C.contact.linkedinHref+'" target="_blank" rel="noopener">LinkedIn</a>' +
+    cvBtn;
+  document.getElementById('contact-grid').innerHTML =
+    '<div class="contact-item">Email<a href="mailto:'+C.contact.email+'">'+C.contact.email+'</a></div>' +
+    '<div class="contact-item">Phone<a href="tel:'+C.contact.phoneHref+'">'+C.contact.phone+'</a></div>' +
+    '<div class="contact-item">LinkedIn<a href="'+C.contact.linkedinHref+'" target="_blank" rel="noopener">'+C.contact.linkedin+'</a></div>';
+  document.getElementById('footer-text').textContent = '\u00A9 ' + new Date().getFullYear() + ' ' + C.hero.name;
+
+  // ================= ANIMATION + INTERACTION =================
+  function animateStat(el){
+    if (el.dataset.done) return;
+    el.dataset.done = '1';
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    if (isNaN(target)) return;
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduceMotion){ el.textContent = target + suffix; return; }
+    var start = null, duration = 700;
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        var stat = entry.target.querySelector('.cs-stat[data-target]');
+        if (stat) animateStat(stat);
+        if (entry.target.matches && entry.target.matches('.cs-stat[data-target]')) animateStat(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.reveal:not(.in-view)').forEach(function(el){ io.observe(el); });
+  document.querySelectorAll('.cs-stat[data-target]').forEach(function(el){ io.observe(el); });
+
+  function wireToggle(btn, wrapId, openLabel, closeLabel){
+    var wrap = document.getElementById(wrapId);
+    btn.textContent = openLabel;
+    btn.addEventListener('click', function(){
+      var open = wrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? closeLabel : openLabel;
+    });
+  }
+  document.querySelectorAll('[data-toggle]').forEach(function(btn){
+    wireToggle(btn, 'wrap-' + btn.getAttribute('data-toggle'), 'See how I approached it \u2193', 'Show less \u2191');
+  });
+  wireToggle(document.getElementById('story-toggle'), 'story-wrap', C.myStory.ctaLabel, 'Show less \u2191');
+  wireToggle(document.getElementById('iso-toggle'), 'wrap-iso', C.isoDeepDive.controlLabel, C.isoDeepDive.collapseLabel);
+
+  var navToggle = document.getElementById('nav-toggle');
+  var navList = document.getElementById('nav-list');
+  navToggle.addEventListener('click', function(){
+    var open = navList.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navList.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navList.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 760){
+      navList.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  var navMap = { hero:'work', proof:'proof', work:'work', howiwork:'howiwork',
+    testimonials:'howiwork', story:'story', iso:'iso', contact:'contact' };
+  var topLinks = document.querySelectorAll('.topnav a[data-nav]');
+  var navIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        var mapped = navMap[entry.target.getAttribute('id')];
+        topLinks.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#' + mapped); });
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('main > section').forEach(function(s){ navIo.observe(s); });
+
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  });
+})();
+</script>
+</body>
+</html>

@@ -67,7 +67,7 @@ const SITE_CONTENT = {
       },
       {
         tag: "Case 02 / 03",
-        title: "Turning AI-assisted training documentation into an organization-level training academy",
+        title: "Turning AI-assisted documentation into a trusted training standard",
         situation: "An organization-level training academy was exploring AI-assisted training documentation. The challenge was to evaluate whether the approach could produce accurate, usable training material and establish whether it was suitable for wider adoption.",
         whatIDid: [
           "Led the execution of a proof of concept evaluating AI-assisted training documentation generation.",
@@ -81,9 +81,9 @@ const SITE_CONTENT = {
         workSnapshot: "AI-assisted documentation generation \u2192 Evaluation framework \u2192 Success criteria + governance \u2192 Cross-functional POC \u2192 Findings + measurable outcomes \u2192 Senior leadership review \u2192 Formal adoption",
         whatChanged: "The proof of concept demonstrated a scalable approach to AI-assisted training documentation generation, while the evaluation framework provided a structured basis for assessing the approach before wider adoption.",
         statValue: 83, statSuffix: "%", statLabel: "Less dependency on senior specialists",
-        statSub: "66% faster defect resolution. Formally adopted across multiple domains, supporting new-joiner onboarding and a reliable knowledge base.",
+        statSub: "66% faster defect resolution, and adopted as the organization-wide standard.",
         expandLabel: "The judgement",
-        expandContent: "The POC focused on more than demonstrating AI-generated content. Defining the evaluation framework, success criteria, and governance made it possible to objectively assess the approach and its suitability for wider adoption.",
+        expandContent: "The POC focused on more than demonstrating AI-generated content. Defining the evaluation framework, success criteria, and governance made it possible to objectively assess the approach and its suitability for wider adoption. The resulting documentation now supports new-joiner onboarding and functions as a reliable knowledge base.",
         deepDive: false
       },
       {
@@ -101,7 +101,7 @@ const SITE_CONTENT = {
         ],
         workSnapshot: "Feature \u2192 5 stories \u2192 2 cross-domain dependencies \u2192 dependency found before sprint planning \u2192 resequenced \u2192 delivery risk avoided.",
         whatChanged: "The dependent work was resequenced before capacity was committed, avoiding a delivery problem that would otherwise have surfaced inside the sprint.",
-        statValue: 40, statSuffix: "%", statLabel: "Of committed sprint story points protected from slippage",
+        statValue: 40, statSuffix: "%", statLabel: "Sprint story points protected from slippage",
         statSub: "",
         expandLabel: "The judgement",
         expandContent: "The teams were under their own delivery pressure and each had a reason to keep its preferred order. The useful intervention was not simply spotting the dependency, it was finding it early enough that sequencing could still change.",
@@ -188,7 +188,7 @@ const SITE_CONTENT = {
     eyebrow: "Specialist Depth",
     heading: "Payments / ISO 20022",
     opening: "This section is for readers who want to verify real payments and ISO 20022 depth, not just the label.",
-    summary: "I've worked message analysis, mapping, business rules, and implementation impact for real payment message families. What follows is generalized: no client names, proprietary schemas, production messages, or identifiable implementation detail.",
+    summary: "I've worked across message analysis, mapping, business rules, and implementation impact for real payment message families. What follows is generalized: no client names, proprietary schemas, production messages, or identifiable implementation detail.",
     controlLabel: "Explore my ISO 20022 depth \u2192",
     collapseLabel: "Show less \u2191",
     families: [

@@ -71,10 +71,8 @@ const SITE_CONTENT = {
         whatIDid: [
           "Led the execution of a proof of concept evaluating AI-assisted training documentation generation.",
           "Defined the evaluation framework, success criteria, and governance for objective assessment.",
-          "Coordinated developers, analyst testers, and reviewers across multiple functions throughout execution.",
-          "Consolidated findings and derived measurable outcomes for presentation to senior leadership.",
-          "Reviewed AI-generated training documentation from a subject-matter perspective for functional accuracy and completeness.",
-          "Validated business behavior, terminology, and implementation details across multiple platform capabilities.",
+          "Coordinated developers, analyst testers, and reviewers across multiple functions, then consolidated findings and measurable outcomes for senior leadership.",
+          "Reviewed AI-generated training documentation for functional accuracy and completeness, validating business behavior, terminology, and implementation details across multiple platform capabilities.",
           "Improved the quality and usability of training material before formal adoption."
         ],
         workSnapshot: "AI-assisted documentation generation \u2192 Evaluation framework \u2192 Success criteria + governance \u2192 Cross-functional POC \u2192 Findings + measurable outcomes \u2192 Senior leadership review \u2192 Formal adoption",

@@ -35,7 +35,7 @@
       <div class="hero-photo-wrap"><img id="hero-photo" src="" alt=""></div>
       <div>
         <h1 class="hero-name" id="hero-name"></h1>
-        <p class="hero-title" id="hero-title"></p>
+        <p class="hero-title" id="hero-title"><span class="title-main" id="hero-title-main"></span><span class="title-credential" id="hero-title-credential"></span></p>
         <p class="hero-tagline" id="hero-tagline"></p>
         <div class="hero-hats">
           <div class="hero-hats-line" id="hero-hats-line"></div>
@@ -118,6 +118,7 @@
     <p class="contact-sub reveal r1 in-view" id="contact-sub"></p>
     <div class="contact-ctas reveal r2 in-view" id="contact-ctas"></div>
     <div class="contact-grid reveal r3 in-view" id="contact-grid"></div>
+    <p class="contact-credentials reveal r3 in-view" id="contact-credentials"></p>
   </section>
 
   <footer id="footer-text"></footer>
@@ -138,7 +139,8 @@
   var photo = document.getElementById('hero-photo');
   photo.src = C.hero.photo; photo.alt = C.hero.name;
   document.getElementById('hero-name').textContent = C.hero.name;
-  document.getElementById('hero-title').textContent = C.hero.title;
+  document.getElementById('hero-title-main').textContent = C.hero.title.toUpperCase();
+  document.getElementById('hero-title-credential').textContent = '\u00B7 ' + C.hero.credential;
   document.getElementById('hero-tagline').textContent = C.hero.tagline;
   document.getElementById('hero-hats-line').textContent = C.hero.hatsLine;
   document.getElementById('hero-hats-sub').textContent = C.hero.hatsSubline;
@@ -151,8 +153,8 @@
     : '<span class="btn disabled" title="Resume link not yet provided">'+C.hero.ctaTertiaryLabel+' (link pending)</span>';
   document.getElementById('hero-ctas').innerHTML =
     '<a class="btn" href="'+C.hero.ctaPrimary.href+'">'+C.hero.ctaPrimary.label+'</a>' +
-    '<a class="btn ghost" href="'+C.hero.ctaSecondary.href+'">'+C.hero.ctaSecondary.label+'</a>' +
-    heroCvBtn;
+    heroCvBtn +
+    '<a class="btn ghost" href="'+C.hero.ctaSecondary.href+'">'+C.hero.ctaSecondary.label+'</a>';
 
   // PROOF
   document.getElementById('proof-eyebrow').textContent = C.proof.eyebrow;
@@ -174,22 +176,23 @@
       '<h3 class="cs-title reveal r1 in-view">'+cs.title+'</h3>' +
       '<div class="cs-body">' +
         '<div class="cs-text reveal r2 in-view">' +
-          '<div class="cs-label">Problem</div><p class="cs-copy">'+cs.problem+'</p>' +
-          '<div class="cs-label">What I Owned</div><p class="cs-copy">'+cs.owned+'</p>' +
-          '<div class="cs-label">Decision</div><p class="cs-copy">'+cs.decision+'</p>' +
-          '<button class="expand-toggle" data-toggle="'+deepId+'" aria-expanded="false"></button>' +
+          '<div class="cs-label">The Situation</div><p class="cs-copy">'+cs.situation+'</p>' +
+          '<div class="cs-label">What I Did</div>' +
+          '<ul class="cs-did">' + cs.whatIDid.map(function(a){ return '<li>'+a+'</li>'; }).join('') + '</ul>' +
+          '<div class="cs-label">Work Snapshot</div>' +
+          '<div class="snapshot-flow">'+cs.workSnapshot+'</div>' +
+          '<div class="cs-label">What Changed</div><p class="cs-copy">'+cs.whatChanged+'</p>' +
+          '<button class="expand-toggle" data-toggle="'+deepId+'" data-openlabel="'+cs.expandLabel+'" aria-expanded="false"></button>' +
           '<div class="expand-wrap" id="wrap-'+deepId+'"><div class="expand-inner"><div class="cs-deep">' +
-            '<div class="cs-label">Method</div><p class="cs-copy">'+cs.method+'</p>' +
-            '<div class="cs-label">Trade-off</div><p class="cs-copy">'+cs.tradeoff+'</p>' +
-            '<div class="cs-label">Under Pressure</div><p class="cs-copy">'+cs.pressure+'</p>' +
-            '<div class="cs-label">What I\u2019d Refine</div><p class="cs-copy">'+cs.learning+'</p>' +
+            '<p class="cs-copy">'+cs.expandContent+'</p>' +
             (cs.deepDive ? '<a class="expand-toggle" href="#iso">Go deeper: Payments / ISO 20022 \u2192</a>' : '') +
           '</div></div></div>' +
         '</div>' +
         '<div class="cs-side reveal r3 in-view">' +
-          '<div class="cs-stat" data-target="'+cs.statValue+'" data-suffix="'+cs.statSuffix+'">0'+cs.statSuffix+'</div>' +
-          '<div class="cs-statlabel">'+cs.statLabel+'</div>' +
-          (cs.statSub ? '<div class="cs-statsub">'+cs.statSub+'</div>' : '') +
+          (cs.statType === 'text'
+            ? '<div class="cs-statlabel" style="text-transform:uppercase; letter-spacing:0.1em; color:var(--accent-bright); font-weight:700; margin-bottom:0.8rem;">Result</div><p class="cs-result-text">'+cs.resultText+'</p>'
+            : '<div class="cs-stat" data-target="'+cs.statValue+'" data-suffix="'+cs.statSuffix+'">0'+cs.statSuffix+'</div><div class="cs-statlabel">'+cs.statLabel+'</div>'+(cs.statSub ? '<div class="cs-statsub">'+cs.statSub+'</div>' : '')
+          ) +
         '</div>' +
       '</div>' +
     '</div>';
@@ -199,7 +202,7 @@
   document.getElementById('cap-eyebrow').textContent = C.capabilities.eyebrow;
   document.getElementById('cap-subhead').textContent = C.capabilities.hatsIntro;
   document.getElementById('hats-grid').innerHTML = C.capabilities.hats.map(function(h,i){
-    return '<div class="hat-card reveal r'+Math.min(i%3+1,3)+' in-view"><div class="hat-name">'+h.name+'</div><div class="hat-proof">'+h.proof+'</div></div>';
+    return '<div class="hat-card reveal r'+Math.min(i%3+1,3)+' in-view"><div class="hat-name">'+h.name+'</div><div class="hat-proof">'+h.proof+'</div>'+(h.credential ? '<div class="cap-credential">'+h.credential+'</div>' : '')+'</div>';
   }).join('');
   document.getElementById('howiwork-heading').textContent = C.capabilities.howIWorkHeading;
   document.getElementById('how-grid').innerHTML = C.capabilities.capabilitiesList.map(function(c,i){
@@ -258,6 +261,7 @@
     '<div class="contact-item">Email<a href="mailto:'+C.contact.email+'">'+C.contact.email+'</a></div>' +
     '<div class="contact-item">Phone<a href="tel:'+C.contact.phoneHref+'">'+C.contact.phone+'</a></div>' +
     '<div class="contact-item">LinkedIn<a href="'+C.contact.linkedinHref+'" target="_blank" rel="noopener">'+C.contact.linkedin+'</a></div>';
+  document.getElementById('contact-credentials').textContent = C.contact.credentials;
   document.getElementById('footer-text').textContent = '\u00A9 ' + new Date().getFullYear() + ' ' + C.hero.name;
 
   // ================= ANIMATION + INTERACTION =================
@@ -302,7 +306,8 @@
     });
   }
   document.querySelectorAll('[data-toggle]').forEach(function(btn){
-    wireToggle(btn, 'wrap-' + btn.getAttribute('data-toggle'), 'See how I approached it \u2193', 'Show less \u2191');
+    var label = btn.getAttribute('data-openlabel') || 'See how I approached it';
+    wireToggle(btn, 'wrap-' + btn.getAttribute('data-toggle'), label + ' \u2193', 'Show less \u2191');
   });
   wireToggle(document.getElementById('story-toggle'), 'story-wrap', C.myStory.ctaLabel, 'Show less \u2191');
   wireToggle(document.getElementById('iso-toggle'), 'wrap-iso', C.isoDeepDive.controlLabel, C.isoDeepDive.collapseLabel);

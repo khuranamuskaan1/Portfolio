@@ -81,7 +81,9 @@
   .hero-photo-wrap img{max-width:260px; display:block; filter:drop-shadow(0 20px 40px rgba(0,0,0,0.55));}
   @keyframes heroPhoto{ to{opacity:1; transform:translateX(0);} }
   .hero-name{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .3s forwards; font-size:var(--fs-name); font-weight:800; letter-spacing:-0.02em; line-height:1.04;}
-  .hero-title{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .42s forwards; font-size:1.1rem; font-weight:500; color:var(--accent-bright); margin-top:0.4rem;}
+  .hero-title{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .42s forwards; margin-top:0.4rem;}
+  .hero-title .title-main{font-size:1.1rem; font-weight:700; color:var(--accent-bright);}
+  .hero-title .title-credential{font-size:0.85rem; font-weight:400; color:var(--fg-faint); margin-left:0.5rem;}
   .hero-tagline{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .54s forwards; font-size:var(--fs-tagline); font-weight:300; color:var(--fg-dim); max-width:46ch; margin-top:1rem; line-height:1.5;}
   .hero-hats{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .66s forwards; margin-top:1.2rem;}
   .hero-hats-line{font-size:0.98rem; font-weight:700; color:var(--fg);}
@@ -118,7 +120,14 @@
   .cs-side .cs-stat{font-size:var(--fs-stat); font-weight:800; color:var(--accent-bright); line-height:1;}
   .cs-statlabel{font-size:0.82rem; color:var(--fg-dim); margin-top:0.5rem; max-width:20ch;}
   .cs-statsub{font-size:0.8rem; color:var(--fg-faint); margin-top:0.5rem;}
+  .cs-result-text{font-size:1.15rem; font-weight:600; color:var(--fg); line-height:1.45; max-width:22ch;}
   .cs-deep{margin-top:0.4rem;}
+  .cs-did{list-style:none; margin:0.2rem 0 0;}
+  .cs-did li{font-size:var(--fs-body); color:var(--fg-dim); padding-left:1.2rem; position:relative; margin-bottom:0.7rem; line-height:1.55;}
+  .cs-did li::before{content:'\2192'; position:absolute; left:0; color:var(--accent-bright); font-weight:700;}
+  .snapshot-flow{background:var(--card); border:1px solid var(--line); border-radius:3px; padding:1rem 1.2rem; font-size:0.86rem; color:var(--fg-dim); line-height:1.7; max-width:56ch;}
+  .cap-credential{font-size:0.78rem; color:var(--fg-faint); margin-top:0.5rem; font-style:italic;}
+  .contact-credentials{font-size:0.85rem; color:var(--fg-faint); margin-top:1.6rem; padding-top:1.2rem; border-top:1px solid var(--line);}
 
   /* ===== CAPABILITIES ===== */
   .cap-subhead{font-size:var(--fs-display); font-weight:600; max-width:32ch; margin-bottom:2rem; line-height:1.35;}

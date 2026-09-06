@@ -56,6 +56,7 @@ const SITE_CONTENT = {
           "Used that comparison to define a reusable capability instead of another one-off implementation.",
           "Kept genuine client-specific variation configurable rather than forcing it into the shared logic."
         ],
+        whatIDidMore: [],
         workSnapshot: "Repeated implementation \u2192 identify common logic \u2192 separate configurable variation \u2192 reusable capability \u2192 future implementations reuse the common layer.",
         whatChanged: "The repeated logic became a reusable capability that future implementations could use, while client-specific differences remained configurable.",
         statValue: 67, statSuffix: "%", statLabel: "Less implementation time per project",
@@ -71,7 +72,9 @@ const SITE_CONTENT = {
         whatIDid: [
           "Led the execution of a proof of concept evaluating AI-assisted training documentation generation.",
           "Defined the evaluation framework, success criteria, and governance for objective assessment.",
-          "Coordinated developers, analyst testers, and reviewers across multiple functions, then consolidated findings and measurable outcomes for senior leadership.",
+          "Coordinated developers, analyst testers, and reviewers across multiple functions, then consolidated findings and measurable outcomes for senior leadership."
+        ],
+        whatIDidMore: [
           "Reviewed AI-generated training documentation for functional accuracy and completeness, validating business behavior, terminology, and implementation details across multiple platform capabilities.",
           "Improved the quality and usability of training material before formal adoption."
         ],
@@ -91,8 +94,10 @@ const SITE_CONTENT = {
           "Reviewed the five stories against their underlying dependencies instead of treating the existing story split as fixed.",
           "Traced the two affected stories to the work required from the other domain.",
           "Identified the sequencing problem before sprint planning locked the team's capacity.",
-          "Raised the dependency while multiple teams were pushing their own priorities.",
           "Drove a resequencing decision before the stories were committed to the sprint."
+        ],
+        whatIDidMore: [
+          "Raised the dependency while multiple teams were pushing their own priorities."
         ],
         workSnapshot: "Feature \u2192 5 stories \u2192 2 cross-domain dependencies \u2192 dependency found before sprint planning \u2192 resequenced \u2192 delivery risk avoided.",
         whatChanged: "The dependent work was resequenced before capacity was committed, avoiding a delivery problem that would otherwise have surfaced inside the sprint.",

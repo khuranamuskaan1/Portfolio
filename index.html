@@ -179,11 +179,13 @@
           '<div class="cs-label">The Situation</div><p class="cs-copy">'+cs.situation+'</p>' +
           '<div class="cs-label">What I Did</div>' +
           '<ul class="cs-did">' + cs.whatIDid.map(function(a){ return '<li>'+a+'</li>'; }).join('') + '</ul>' +
-          '<div class="cs-label">Work Snapshot</div>' +
-          '<div class="snapshot-flow">'+cs.workSnapshot+'</div>' +
-          '<div class="cs-label">What Changed</div><p class="cs-copy">'+cs.whatChanged+'</p>' +
           '<button class="expand-toggle" data-toggle="'+deepId+'" data-openlabel="'+cs.expandLabel+'" aria-expanded="false"></button>' +
           '<div class="expand-wrap" id="wrap-'+deepId+'"><div class="expand-inner"><div class="cs-deep">' +
+            (cs.whatIDidMore && cs.whatIDidMore.length ? '<ul class="cs-did">' + cs.whatIDidMore.map(function(a){ return '<li>'+a+'</li>'; }).join('') + '</ul>' : '') +
+            '<div class="cs-label">Work Snapshot</div>' +
+            '<div class="snapshot-flow">'+cs.workSnapshot+'</div>' +
+            '<div class="cs-label">What Changed</div><p class="cs-copy">'+cs.whatChanged+'</p>' +
+            '<div class="cs-label">'+cs.expandLabel+'</div>' +
             '<p class="cs-copy">'+cs.expandContent+'</p>' +
             (cs.deepDive ? '<a class="expand-toggle" href="#iso">Go deeper: Payments / ISO 20022 \u2192</a>' : '') +
           '</div></div></div>' +

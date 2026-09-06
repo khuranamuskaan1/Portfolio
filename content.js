@@ -118,7 +118,7 @@ const SITE_CONTENT = {
       { name: "Requirements Translator", proof: "Requirements, stories, acceptance criteria, and buildable system behavior." },
       { name: "Solution Designer", proof: "Functional solution logic, system behavior, and dependencies." },
       { name: "Client-Facing Consultant", proof: "Workshops, challenge, pressure-testing, and carrying decisions into delivery." },
-      { name: "Delivery Partner", proof: "Dependency spotting, sequencing, and intervention before delivery risk." },
+      { name: "Scrum Practitioner", proof: "Dependency spotting, sequencing, and intervention before delivery risk." },
       { name: "Domain Specialist", proof: "Payments, regulatory change, and ISO 20022 when specialist depth is required." }
     ],
     howIWorkHeading: "How I Work",

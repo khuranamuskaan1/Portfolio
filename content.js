@@ -22,7 +22,7 @@ const SITE_CONTENT = {
       { value: "83%", label: "Less SME dependency" },
       { value: "66%", label: "Faster defect resolution" }
     ],
-    relocation: "Open to relocation across the UK & EU",
+    relocation: "Open to opportunities globally \u00B7 Willing to relocate",
     photo: "photo.png",
     ctaPrimary: { label: "View my work", href: "#work" },
     ctaSecondary: { label: "Let's talk", href: "#contact" },

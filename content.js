@@ -212,7 +212,7 @@ const SITE_CONTENT = {
   contact: {
     eyebrow: "Let's Talk",
     headline: "Have a payments, product, or delivery problem that needs untangling? Let's talk.",
-    subline: "Open to Business Analyst, Product Owner, Payments / ISO 20022, and client-facing solution roles across the UK & EU.",
+    subline: "Open to Business Analyst, Product Owner, Payments / ISO 20022, and client-facing solution roles, globally.",
     credentials: "Certified Scrum Product Owner (CSPO\u00AE), Scrum Alliance. SQL (Intermediate), HackerRank.",
     email: "khuranamuskaan13@gmail.com",
     phone: "+91 98132 91401",

@@ -23,7 +23,7 @@ const SITE_CONTENT = {
       { value: "66%", label: "Faster defect resolution" }
     ],
     relocation: "Open to opportunities globally \u00B7 Willing to relocate",
-    photo: "photo.PNG",
+    photo: "photo.png",
     ctaPrimary: { label: "View my work", href: "#work" },
     ctaSecondary: { label: "Let's talk", href: "#contact" },
     ctaTertiaryLabel: "Download CV"

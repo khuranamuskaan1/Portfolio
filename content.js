@@ -13,7 +13,7 @@ const SITE_CONTENT = {
   hero: {
     name: "Muskaan Khurana",
     title: "Business Analyst",
-    credential: "CSPO\u00AE",
+    credential: "Product Strategy \u00B7 CSPO\u00AE",
     tagline: "I turn complex business problems into clear requirements, workable solutions, and delivery decisions, across product, technology, and regulated environments.",
     hatsLine: "One role. Multiple hats.",
     hatsSubline: "Product thinking, Requirements, Solution design, Client delivery, Domain analysis, Delivery judgement.",
@@ -23,7 +23,7 @@ const SITE_CONTENT = {
       { value: "66%", label: "Faster defect resolution" }
     ],
     relocation: "Open to opportunities globally \u00B7 Willing to relocate",
-    photo: "Photo.PNG",
+    photo: "photo.png",
     ctaPrimary: { label: "View my work", href: "#work" },
     ctaSecondary: { label: "Let's talk", href: "#contact" },
     ctaTertiaryLabel: "Download CV"
@@ -126,12 +126,13 @@ const SITE_CONTENT = {
       { name: "Requirements to System Behavior", evidence: "BRD/FRD/PRD, user stories, acceptance criteria, vertical slicing. ~60% fewer downstream clarifications." },
       { name: "Prioritization & Product Judgement", evidence: "Backlog sequencing, capacity planning, scope trade-offs, regulatory deadlines, dependency resequencing." },
       { name: "Payments & ISO 20022", evidence: "Message analysis, mapping, business rules, regulatory change, implementation impact." },
-      { name: "Data & Technical Analysis", evidence: "SQL, APIs, Postman / Insomnia, Excel." },
+      { name: "Data & Technical Analysis", evidence: "SQL, REST API design & specification, Postman / Insomnia, Excel." },
+      { name: "AI-Augmented Analysis", evidence: "GenAI and agentic AI tools (Claude, GitHub Copilot) for solution-design comparison, cutting review time by ~75% with full human validation of every output." },
       { name: "Risk & UAT", evidence: "Risk-based test scope, high-risk scenarios, regulatory coverage. ~50% less execution effort." },
       { name: "Client & Stakeholder Delivery", evidence: "Client workshops, multi-region communication, functional solution design." },
       { name: "Leadership", evidence: "POC leadership, mentoring, 400+ professional knowledge-sharing." }
     ],
-    tools: "SQL, Jira, Confluence, APIs, Postman, Insomnia, Excel, Gliffy, Figma"
+    tools: "SQL, REST APIs, Postman, Insomnia, JIRA, Confluence, Excel / Google Sheets, Visio, Notion, Gliffy, Trello, GitHub Copilot, Claude"
   },
 
   testimonials: {

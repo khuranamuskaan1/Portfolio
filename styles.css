@@ -83,7 +83,7 @@
   .hero-name{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .3s forwards; font-size:var(--fs-name); font-weight:800; letter-spacing:-0.02em; line-height:1.04;}
   .hero-title{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .42s forwards; margin-top:0.4rem;}
   .hero-title .title-main{font-size:1.1rem; font-weight:700; color:var(--accent-bright);}
-  .hero-title .title-credential{font-size:0.85rem; font-weight:400; color:var(--fg-faint); margin-left:0.5rem;}
+  .hero-title .title-credential{font-size:1.1rem; font-weight:700; color:var(--accent-bright); text-transform:uppercase; margin-left:0.5rem;}
   .hero-tagline{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .54s forwards; font-size:var(--fs-tagline); font-weight:300; color:var(--fg-dim); max-width:46ch; margin-top:1rem; line-height:1.5;}
   .hero-hats{opacity:0; transform:translateY(14px); animation:heroUp .6s ease .66s forwards; margin-top:1.2rem;}
   .hero-hats-line{font-size:0.98rem; font-weight:700; color:var(--fg);}

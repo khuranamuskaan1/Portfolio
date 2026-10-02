@@ -23,7 +23,7 @@ const SITE_CONTENT = {
       { value: "66%", label: "Faster defect resolution" }
     ],
     relocation: "Open to opportunities globally \u00B7 Willing to relocate",
-    photo: "Photo.PNG",
+    photo: "photo.png",
     ctaPrimary: { label: "View my work", href: "#work" },
     ctaSecondary: { label: "Let's talk", href: "#contact" },
     ctaTertiaryLabel: "Download CV"
@@ -44,10 +44,10 @@ const SITE_CONTENT = {
 
   work: {
     eyebrow: "Selected Work",
-    heading: "Three problems. Three different kinds of judgement.",
+    heading: "Four problems. Four different kinds of judgement.",
     items: [
       {
-        tag: "Case 01 / 03",
+        tag: "Case 01 / 04",
         title: "One platform, instead of a hundred one-off fixes",
         situation: "Every new payment message type was creating another implementation effort. The same work was being repeated, while client-specific differences still needed to stay flexible.",
         whatIDid: [
@@ -60,34 +60,53 @@ const SITE_CONTENT = {
         workSnapshot: "Repeated implementation \u2192 identify common logic \u2192 separate configurable variation \u2192 reusable capability \u2192 future implementations reuse the common layer.",
         whatChanged: "The repeated logic became a reusable capability that future implementations could use, while client-specific differences remained configurable.",
         statValue: 67, statSuffix: "%", statLabel: "Less implementation time per project",
-        statSub: "The reusable approach required roughly two additional sprints up front, but later implementations repaid that investment within the same quarter.",
+        statSub: "Designed as a single point of change for future regulatory updates and new implementations.",
         expandLabel: "Why I made that call",
-        expandContent: "The first project could have taken the faster one-off route. I chose to spend roughly two extra sprints building the reusable approach because the same implementation pattern was already repeating. The important boundary was keeping genuine client variation configurable.",
+        expandContent: "The first project could have taken the faster one-off route. I chose to invest in the reusable approach because the same implementation pattern was already repeating, and designed it to remain a single point of change for any future changes and implementations. The important boundary was keeping genuine client variation configurable.",
         deepDive: true
       },
       {
-        tag: "Case 02 / 03",
+        tag: "Case 02 / 04",
         title: "Turning AI-assisted documentation into a trusted training standard",
-        situation: "An organization-level training academy was exploring AI-assisted training documentation. The challenge was to evaluate whether the approach could produce accurate, usable training material and establish whether it was suitable for wider adoption.",
+        situation: "An organisation-level training academy was exploring AI-assisted training documentation. The challenge was to evaluate whether the approach could produce accurate, usable training material and establish whether it was suitable for wider adoption.",
         whatIDid: [
           "Led the execution of a proof of concept evaluating AI-assisted training documentation generation.",
           "Defined the evaluation framework, success criteria, and governance for objective assessment.",
           "Coordinated developers, analyst testers, and reviewers across multiple functions, then consolidated findings and measurable outcomes for senior leadership."
         ],
         whatIDidMore: [
-          "Reviewed AI-generated training documentation for functional accuracy and completeness, validating business behavior, terminology, and implementation details across multiple platform capabilities.",
+          "Reviewed AI-generated training documentation for functional accuracy and completeness, validating business behaviour, terminology, and implementation details across multiple platform capabilities.",
           "Improved the quality and usability of training material before formal adoption."
         ],
         workSnapshot: "AI-assisted documentation generation \u2192 Evaluation framework \u2192 Success criteria + governance \u2192 Cross-functional POC \u2192 Findings + measurable outcomes \u2192 Senior leadership review \u2192 Formal adoption",
         whatChanged: "The proof of concept demonstrated a scalable approach to AI-assisted training documentation generation, while the evaluation framework provided a structured basis for assessing the approach before wider adoption.",
         statValue: 83, statSuffix: "%", statLabel: "Less dependency on senior specialists",
-        statSub: "66% faster defect resolution, and adopted as the organization-wide standard.",
+        statSub: "66% faster defect resolution, and adopted as the organisation-wide standard.",
         expandLabel: "The judgement",
         expandContent: "The POC focused on more than demonstrating AI-generated content. Defining the evaluation framework, success criteria, and governance made it possible to objectively assess the approach and its suitability for wider adoption. The resulting documentation now supports new-joiner onboarding and functions as a reliable knowledge base.",
         deepDive: false
       },
       {
-        tag: "Case 03 / 03",
+        tag: "Case 03 / 04",
+        title: "Designing the guardrails for a firm-wide enterprise AI tool",
+        situation: "FNZ introduced an internal enterprise AI tool for analysis work. Before BA teams could rely on it, they needed clear workflows and defined points where a person must review what the AI produced.",
+        whatIDid: [
+          "Designed the BA workflows for using the tool across analysis tasks.",
+          "Defined the governance and guardrails for how AI outputs are used.",
+          "Mapped the touch points where human-in-the-loop review is mandatory before an AI output moves forward.",
+          "Piloted the tool on my own solution-design reviews to test the workflow in practice."
+        ],
+        whatIDidMore: [],
+        workSnapshot: "Internal enterprise AI tool \u2192 BA workflows \u2192 governance and guardrails \u2192 mandatory human-in-the-loop touch points \u2192 pilot on solution-design reviews \u2192 available firm-wide, adopted by BA teams globally.",
+        whatChanged: "The tool was made available firm-wide and adopted by BA teams across FNZ's global regions, with mandatory human review points built into the workflow.",
+        statValue: 75, statSuffix: "%", statLabel: "Less solution-design analysis time (approx., early pilot)",
+        statSub: "Adopted by BA teams across all FNZ regions.",
+        expandLabel: "The judgement",
+        expandContent: "An AI tool is only useful in analysis work if people know when its output can move forward and when it must be checked. Designing the human-in-the-loop points into the workflow itself is what made it safe for BA teams to rely on it.",
+        deepDive: false
+      },
+      {
+        tag: "Case 04 / 04",
         title: "I found a cross-domain dependency before it became sprint spillover",
         situation: "One feature had been split into five stories across a shared domain model. Two of those stories depended on work owned by another domain.",
         whatIDid: [
@@ -114,20 +133,20 @@ const SITE_CONTENT = {
     eyebrow: "Capabilities",
     hatsIntro: "I'm a Business Analyst who wears different hats depending on what the problem requires.",
     hats: [
-      { name: "Product Thinker", proof: "Prioritization, success criteria, scope trade-offs, capacity and sequencing.", credential: "Certified Scrum Product Owner (CSPO\u00AE)" },
-      { name: "Requirements Translator", proof: "Requirements, stories, acceptance criteria, and buildable system behavior." },
-      { name: "Solution Designer", proof: "Functional solution logic, system behavior, and dependencies." },
+      { name: "Product Thinker", proof: "Prioritisation, success criteria, scope trade-offs, capacity and sequencing.", credential: "Certified Scrum Product Owner (CSPO\u00AE)" },
+      { name: "Requirements Translator", proof: "Requirements, stories, acceptance criteria, and buildable system behaviour." },
+      { name: "Solution Designer", proof: "Functional solution logic, system behaviour, and dependencies." },
       { name: "Client-Facing Consultant", proof: "Workshops, challenge, pressure-testing, and carrying decisions into delivery." },
       { name: "Scrum Practitioner", proof: "Dependency spotting, sequencing, and intervention before delivery risk." },
       { name: "Domain Specialist", proof: "Payments, regulatory change, and ISO 20022 when specialist depth is required." }
     ],
     howIWorkHeading: "How I Work",
     capabilitiesList: [
-      { name: "Requirements to System Behavior", evidence: "BRD/FRD/PRD, user stories, acceptance criteria, vertical slicing. ~60% fewer downstream clarifications." },
-      { name: "Prioritization & Product Judgement", evidence: "Backlog sequencing, capacity planning, scope trade-offs, regulatory deadlines, dependency resequencing." },
+      { name: "Requirements to System Behaviour", evidence: "BRD/FRD/PRD, user stories, acceptance criteria, vertical slicing. ~60% fewer downstream clarifications." },
+      { name: "Prioritisation & Product Judgement", evidence: "Backlog sequencing, capacity planning, scope trade-offs, regulatory deadlines, dependency resequencing." },
       { name: "Payments & ISO 20022", evidence: "Message analysis, mapping, business rules, regulatory change, implementation impact." },
       { name: "Data & Technical Analysis", evidence: "SQL, REST API design & specification, Postman / Insomnia, Excel." },
-      { name: "AI-Augmented Analysis", evidence: "GenAI and agentic AI tools (Claude, GitHub Copilot) for solution-design comparison, cutting review time by ~75% with full human validation of every output." },
+      { name: "Enterprise AI & Governance", evidence: "Designed workflows, guardrails, and human-in-the-loop checkpoints for a firm-wide enterprise AI tool; piloting it cut solution-design analysis by ~75%. Led the AI documentation POC adopted as an organisation-wide standard." },
       { name: "Risk & UAT", evidence: "Risk-based test scope, high-risk scenarios, regulatory coverage. ~50% less execution effort." },
       { name: "Client & Stakeholder Delivery", evidence: "Client workshops, multi-region communication, functional solution design." },
       { name: "Leadership", evidence: "POC leadership, mentoring, 400+ professional knowledge-sharing." }
@@ -163,15 +182,15 @@ const SITE_CONTENT = {
         what: "B.Tech in Biotechnology, Jaypee University of Information Technology.",
         why: "Started in the sciences, drawn to work where precision has real consequences.",
         learned: "Evidence-based thinking, and how to sit with a problem until the data actually explains it.",
-        gained: "A foundation in rigor before I ever touched a requirement document."
+        gained: "A foundation in rigour before I ever touched a requirement document."
       },
       {
         phase: "Software / Technology",
         when: "March 2023 to May 2025, Rxlogix Corporation",
-        what: "The major pivot: out of biotechnology and into software and technology, entering pharmacovigilance as a QABA, a Business Quality Analyst role that fused QA and BA from day one.",
+        what: "The major pivot: out of biotechnology and into software, joining Rxlogix as a Business Quality Analyst on pharmacovigilance software. Moved from QA into business analysis within the first year, writing requirements and user stories with the Product Owner.",
         why: "A missed detail in pharmacovigilance isn't academic, it's a real-world safety risk. That kind of stakes felt like the right place to apply the precision I'd trained for, just in software instead of a lab.",
         learned: "How to test whether a requirement actually holds up, not just how to write one.",
-        gained: "Mentored 7 new team members, led defect trend analysis, and started catching gaps before they reached QA."
+        gained: "Built a traceability matrix covering 30 user stories across 6 epics for a full release, mentored 7 new team members, led defect trend analysis, and caught gaps before they reached QA."
       },
       {
         phase: "Finance / Fintech",
@@ -189,7 +208,7 @@ const SITE_CONTENT = {
     eyebrow: "Specialist Depth",
     heading: "Payments / ISO 20022",
     opening: "This section is for readers who want to verify real payments and ISO 20022 depth, not just the label.",
-    summary: "I've worked across message analysis, mapping, business rules, and implementation impact for real payment message families. What follows is generalized: no client names, proprietary schemas, production messages, or identifiable implementation detail.",
+    summary: "I've worked across message analysis, mapping, business rules, and implementation impact for real payment message families, across CHAPS, SEPA, and Faster Payments. What follows is generalised: no client names, proprietary schemas, production messages, or identifiable implementation detail.",
     controlLabel: "Explore my ISO 20022 depth \u2192",
     collapseLabel: "Show less \u2191",
     families: [
@@ -201,7 +220,7 @@ const SITE_CONTENT = {
     capabilities: [
       "Message analysis: what changed, and why",
       "Field-level interpretation and source-to-target mapping",
-      "Business rules and validation behavior",
+      "Business rules and validation behaviour",
       "Impact analysis across dependent capabilities",
       "Requirements through user stories to acceptance criteria",
       "API and integration implications where relevant",
